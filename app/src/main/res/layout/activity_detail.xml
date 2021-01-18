@@ -22,7 +22,7 @@
     <RelativeLayout
         android:id="@+id/cardView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="184dp">
 
         <TextView
             android:id="@+id/tvTitle"
@@ -77,6 +77,22 @@
             android:rating="8.5"
             android:scaleX="1.3"
             android:scaleY="1.3" />
+
+        <TextView
+            android:id="@+id/popularity"
+            android:layout_width="307dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textRelease"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginBottom="10dp"
+            android:layout_toEndOf="@+id/imageView"
+            android:text="TextView"
+            android:textAlignment="center"
+            android:textSize="17dp" />
 
     </RelativeLayout>
 

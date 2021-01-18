@@ -33,6 +33,7 @@ public class DetailActivity extends YouTubeBaseActivity {
     YouTubePlayerView youTubePlayerView;
     ImageView imageView;
     TextView textRelease;
+    TextView popularity;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,12 +45,15 @@ public class DetailActivity extends YouTubeBaseActivity {
         youTubePlayerView = findViewById(R.id.player);
         imageView = findViewById(R.id.imageView);
         textRelease = findViewById(R.id.textRelease);
+        popularity = findViewById(R.id.popularity);
 
         Movie movie = (Movie) Parcels.unwrap(getIntent().getParcelableExtra("movie"));
         tvTitle.setText(movie.getTitle());
         tvOverview.setText(movie.getOverview());
         ratingBar.setRating((float) movie.getRating());
         textRelease.setText("Release Date: " + movie.getRelease());
+        popularity.setText("Popularity: " + movie.getPopularity());
+
 
 
         String imageUrl = movie.getPosterPath();
